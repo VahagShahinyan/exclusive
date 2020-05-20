@@ -1,0 +1,61 @@
+<%- include('../includes/header.ejs') %>
+
+
+
+<section class="bg-body section-space-less30">
+    <div class="container">
+        <div class="row">
+            <%staff.forEach(function (user) {%>
+                <div class="col-lg-6 col-md-12">
+                    <div class="bg-accent p-35-r mb-50 item-shadow-1">
+                        <div class="media media-none-xs">
+                            <img src="<%=user.image%>" alt="author" class="img-fluid rounded-circle staffImg">
+                            <div class="media-body pt-10 media-margin30">
+                                <h3 class="size-lg mb-5"><%=user.name%> <%=user.lastName%></h3>
+                                <ul class="author-social-style1 item-inline">
+                                    <%if(user.facebook){%>
+                                    <li>
+                                        <a href="<%=user.facebook%>" title="facebook">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                        <%}%>
+                                    <%if(user.instagram){%>
+
+                                    <li>
+                                    <a href="<%user.instagram%>" title="instagram">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                    </li>
+                                        <%}%>
+
+                                        <%if(user.twitter){%>
+                                    <li>
+                                        <a href="<%=user.twitter%>" title="twitter">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <%}%>
+                                    <%if(user.linkedin){%>
+                                    <li>
+                                        <a href="<%=user.linkedin%>" title="linkedin">
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    <%}%>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <%})%>
+
+
+        </div>
+    </div>
+</section>
+
+<%- include('../includes/moreJS.ejs') %>
+<%- include('../includes/footer.ejs') %>

@@ -1,0 +1,49 @@
+<div class="offcanvas-main-body">
+    <ul id="accordion" class="offcanvas-nav panel-group">
+        <li>
+<!--            staff-->
+            <a href="#">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <%if(lang=='am'){%>
+                    Անձնակազմ
+                <%}else if(lang=='ru'){%>
+                    Штат сотрудников
+                <%}else if(lang=='en'){%>
+                    Staff
+                <%}else{%>
+                <%}%>
+            </a>
+        </li>
+        <li class="panel panel-default">
+            <div class="panel-heading">
+                <a aria-expanded="false" href="/about/<%=lang%>">
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+
+                    <%if(lang=='am'){%>
+                     Մեր մասին
+                    <%}else if(lang=='ru'){%>
+                        О нас
+                    <%}else if(lang=='en'){%>
+                        About as
+                    <%}else{%>
+                        Մեր մասին
+                    <%}%>
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="/contact/<%=lang%>">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <%if(lang=='am'){%>
+                    Կապ
+                <%}else if(lang=='ru'){%>
+                    контакт
+                <%}else if(lang=='en'){%>
+                    Contact
+                <%}else{%>
+                    Կապ
+                <%}%>
+                </a>
+        </li>
+    </ul>
+</div>

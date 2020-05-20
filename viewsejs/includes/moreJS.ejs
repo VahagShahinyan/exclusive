@@ -1,0 +1,46 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var url = window.location.href;
+        var postId = url.split('/')[4];
+        var lang
+        if (url.includes('am')) {
+            lang='am'
+        }else if (url.includes('ru')){
+            lang='ru'
+        }else if (url.includes('en')){
+            lang='en'
+        }else {
+            lang='am'
+        }
+        var status = new URL(url).searchParams.get("s");
+        var lilist=Array.from(document.querySelectorAll('#wrapper header #dropdown ul>li'));
+        if(lilist[0]){
+            if(document.querySelector('#wrapper header #dropdown ul').offsetHeight > lilist[0].offsetHeight+10){
+                var moreText;
+                switch(lang){
+                    case 'am':
+                        moreText="Ավելին";
+                        break;
+                    case 'ru':
+                        moreText='Больше'
+                        break;
+                    case 'en':
+                        moreText='More'
+                        break;
+                }
+                var more=$('<li class="more-sub"><a>'+moreText+'</a><ul class="ne-dropdown-menu"></ul></li>');
+                $(document.querySelectorAll('#wrapper header #dropdown ul')).append(more)
+                for(let i=lilist.length-1;i>=0;i--){
+                    if(!$( lilist[i]).hasClass('more-sub'))
+                        if(document.querySelector('#wrapper header #dropdown ul').offsetHeight > lilist[i].offsetHeight+10){
+                            more.find('ul').eq(0).append( lilist[i]);
+                        }
+                }
+            }
+        }
+
+        $("#lightgallery").lightGallery();
+
+    })
+
+</script>

@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": 44.63,
+        "lat": 40.27
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 17,
+        "feels_like": 12.71,
+        "temp_min": 17,
+        "temp_max": 17,
+        "pressure": 1015,
+        "humidity": 35
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.6,
+        "deg": 30
+    },
+    "clouds": {
+        "all": 51
+    },
+    "dt": 1590008544,
+    "sys": {
+        "type": 1,
+        "id": 8851,
+        "country": "AM",
+        "sunrise": 1590025228,
+        "sunset": 1590077760
+    },
+    "timezone": 14400,
+    "id": 617026,
+    "name": "Abovyan",
+    "cod": 200
+}

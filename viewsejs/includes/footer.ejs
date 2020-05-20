@@ -1,0 +1,247 @@
+<footer>
+    <div class="footer-area-top">
+        <div class="container">
+            <div class="row">
+               <!-- <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-box">
+                        <h2 class="title-bold-light title-bar-left text-uppercase">Most Viewed Posts</h2>
+                        <ul class="most-view-post">
+                            <li>
+                                <div class="media">
+                                    <a href="post-style-1.html">
+                                        <img src="/img/footer/post1.jpg" alt="post" class="img-fluid">
+                                    </a>
+                                    <div class="media-body">
+                                        <h3 class="title-medium-light size-md mb-10">
+                                            <a href="#">Basketball Stars Face Off itim ate Playoff Beard Battle</a>
+                                        </h3>
+                                        <div class="post-date-light">
+                                            <ul>
+                                                <li>
+                                                                <span>
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>November 11, 2017</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <a href="post-style-2.html">
+                                        <img src="/img/footer/post2.jpg" alt="post" class="img-fluid">
+                                    </a>
+                                    <div class="media-body">
+                                        <h3 class="title-medium-light size-md mb-10">
+                                            <a href="#">Basketball Stars Face Off in ate Playoff Beard Battle</a>
+                                        </h3>
+                                        <div class="post-date-light">
+                                            <ul>
+                                                <li>
+                                                                <span>
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>August 22, 2017</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="media">
+                                    <a href="post-style-3.html">
+                                        <img src="/img/footer/post3.jpg" alt="post" class="img-fluid">
+                                    </a>
+                                    <div class="media-body">
+                                        <h3 class="title-medium-light size-md mb-10">
+                                            <a href="#">Basketball Stars Face tim ate Playoff Battle</a>
+                                        </h3>
+                                        <div class="post-date-light">
+                                            <ul>
+                                                <li>
+                                                                <span>
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>March 31, 2017</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>-->
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-box">
+                        <h2 class="title-bold-light title-bar-left text-uppercase">Exchange</h2>
+                        <span style="color: white"><%= exchange[0].date  %></span>
+
+                        <ul class="currency">
+                            <% exchange.forEach(function (item) { %>
+                              <%  if (item.hasOwnProperty('ISO')){ %>
+                                    <li>
+                                        <span class="iso"><%=item.ISO%></span>
+                                        <%if (item.ISO=='USD'){%>
+                                            <img class="currencyImg" src="/img/currency/USD.gif">
+
+                                        <%}else if(item.ISO=='EUR'){%>
+                                            <img  class="currencyImg" src="/img/currency/EUR.gif">
+
+                                        <%}else if(item.ISO=='RUB'){%>
+                                            <img class="currencyImg" src="/img/currency/RUR.gif">
+
+                                        <%}%>
+                                        <span class="rate"><%=item.Rate %></span>
+
+
+
+                                    </li>
+                             <% } %>
+                           <% }) %>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xl-9 col-lg-5 col-md-12 col-sm-12">
+                    <div class="footer-box">
+                        <%-eghanak-%>
+<!--                        <h2 class="title-bold-light title-bar-left text-uppercase">Post Gallery</h2>-->
+<!--
+                        <div class="weather">
+                            <div class="weather-body">
+                                <div class="row">
+                                    <div class="col-md-6 col-12 mt-3">
+                                        <h1 id="icon"><i class="wi wi-day-sunny"></i></h1>
+                                        <h2 class="temp0">26<sup><small>°C</small> </sup></h2>
+                                        <h5 class="feelslike">feels like 26°C </h5>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <h2 class="city">Yerevan</h2>
+                                        <h5 class="iconInfo"><i class="wi wi-cloud"></i>&nbsp;30%&nbsp;&nbsp;<i class="wi wi-humidity"></i>&nbsp;26%&nbsp;&nbsp;<i class="wi wi-strong-wind"></i>&nbsp;4.1km/h</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hr">
+                                <hr>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-6">
+                                    <p id="today">Today</p>
+                                    <p id="icon1"><i class="wi wi-forecast-io-partly-cloudy-day"></i></p>
+                                    <p class="temp1">11°C / 27°C</p>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <p id="tomorrow">Tomorrow</p>
+                                    <p id="icon2"><i class="wi wi-forecast-io-partly-cloudy-day"></i></p>
+                                    <p class="temp2">13°C / 28°C</p>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <p id="dayaftertomorrow">Tuesday</p>
+                                    <p id="icon3"><i class="wi wi-forecast-io-clear-day"></i></p>
+                                    <p class="temp3">14°C / 28°C</p>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <p id="andthedayafter">Wednesday</p>
+                                    <p id="icon4"><i class="wi wi-forecast-io-clear-day"></i></p>
+                                    <p class="temp4">12°C / 28°C</p>
+                                </div>
+                            </div>
+                        </div>
+-->
+
+
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-area-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="/" class="footer-logo img-fluid">
+                        <!--<img src="/img/logo.png" alt="logo" class="img-fluid">-->
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAYAAABvR+QvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdFMTM5QUM4N0VENzExRTk5QzdFQTU3QjUzM0JCQzA0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdFMTM5QUM5N0VENzExRTk5QzdFQTU3QjUzM0JCQzA0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6N0UxMzlBQzY3RUQ3MTFFOTlDN0VBNTdCNTMzQkJDMDQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6N0UxMzlBQzc3RUQ3MTFFOTlDN0VBNTdCNTMzQkJDMDQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6RldS5AAAI0UlEQVR42uxc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" alt="logo" />
+                    </a>
+                    <ul class="footer-social">
+                        <li>
+                            <a href="https://www.facebook.com/ExlcusiveLTD/" title="facebook">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/exclusive.am/" title="instagram">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="google-plus">
+                                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="linkedin">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="pinterest">
+                                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="rss">
+                                <i class="fa fa-rss" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="vimeo">
+                                <i class="fa fa-vimeo" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <p>© 2020 «exclusive.am» կայքից մեջբերումներ, մասնակի կամ ամբողջական
+                       հեռուստաընթերցումներ կատարելիս՝ հղումը կայքին պարտադիր է։Կայքում
+                       արտահայտված կարծիքները կարող են չհամընկնել խմբագրության տեսակետի հետ։ </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="offcanvas-body-wrapper" class="offcanvas-body-wrapper">
+    <div id="offcanvas-nav-close" class="offcanvas-nav-close offcanvas-menu-btn">
+        <a href="#" class="menu-times re-point">
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+
+
+    <%-include('./right_menu.ejs')-%>
+
+</div>
+</div>
+<script src="/js/modernizr-2.8.3.min.js"></script>
+<script src="/js/jquery-2.2.4.min.js " type="text/javascript"></script>
+<script src="/js/plugins.js " type="text/javascript"></script>
+<script src="/js/popper.js " type="text/javascript"></script>
+<script src="/js/bootstrap.min.js " type="text/javascript"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/jquery.meanmenu.min.js" type="text/javascript"></script>
+<script src="/js/jquery.scrollUp.min.js" type="text/javascript"></script>
+<script src="/js/jquery.counterup.min.js"></script>
+<script src="/js/waypoints.min.js"></script>
+<script src="/js/isotope.pkgd.min.js " type="text/javascript"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<!--<script src="/js/ticker.js" type="text/javascript"></script>-->
+<script src="/js/main.js?v=11" type="text/javascript"></script>
+<script src="/lightgallery/dist/js/lightgallery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+<script src="/lightgallery/modules/lg-thumbnail.min.js"></script>
+<script src="/lightgallery/modules/lg-fullscreen.min.js"></script>
+<script>
+</script>
+</body>
+</html>

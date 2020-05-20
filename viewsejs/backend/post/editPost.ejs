@@ -1,0 +1,227 @@
+<%-include('../include/header.ejs')%>
+<form class="kt-form kt-form--fit " method="post" action="/admin/post/create">
+    
+    <div class="row">
+        <div class="col-8">
+            
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__head">
+                    <div class="kt-portlet__head-toolbar">
+                        <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-success nav-tabs-line-2x" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab"
+                                   href="#kt_portlet_base_demo_1_1_tab_content" role="tab" aria-selected="true">
+                                    <i class="la la-language"></i> ARM
+                                </a>
+                            </li>
+                           <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#kt_portlet_base_demo_1_2_tab_content"
+                                   role="tab" aria-selected="false">
+                                    <i class="la la-language"></i> RUS
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " data-toggle="tab" href="#kt_portlet_base_demo_1_3_tab_content"
+                                   role="tab" aria-selected="false">
+                                    <i class="la la-language"></i>ENG
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="kt-portlet__body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="kt_portlet_base_demo_1_1_tab_content" role="tabpanel">
+                            <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label>Название поста</label>
+                                    <input type="text" name="title_am" class="form-control" aria-describedby="emailHelp"
+                                           placeholder="Название поста">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleTextarea_am">Краткое Описание поста</label>
+                                    <textarea name="excerpt_am" class="form-control" id="exampleTextarea_am" rows="3"
+                                              placeholder="Краткое Описание поста"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <label class="col-form-label col-lg-3 col-sm-12">Полный текст</label>
+                                        <div id="id1">
+                                            <textarea class="summernote" name="content_am"></textarea>
+                                        </div>
+                                    </div>
+                                
+                                
+                                </div>
+                            
+                            </div>
+                        </div>
+                        <div class="tab-pane "       id="kt_portlet_base_demo_1_2_tab_content" role="tabpanel">
+                            <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label>Название поста</label>
+                                    <input type="text" name="title_ru" class="form-control" aria-describedby="emailHelp"
+                                           placeholder="Название поста">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleTextarea_ru">Краткое Описание поста</label>
+                                    <textarea name="excerpt_ru" class="form-control" id="exampleTextarea_ru" rows="3"
+                                              placeholder="Краткое Описание поста"></textarea>
+                                </div>
+                                <div class="form-group row">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <label class="col-form-label col-lg-3 col-sm-12">Полный текст</label>
+                                        <div id="id2">
+                                            <textarea class="summernote" name="content_ru"></textarea>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane "       id="kt_portlet_base_demo_1_3_tab_content" role="tabpanel">
+                            <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label>Название поста</label>
+                                    <input type="text" name="title_en" class="form-control" aria-describedby="emailHelp"
+                                           placeholder="Название поста">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleTextarea_en">Краткое Описание поста</label>
+                                    <textarea name="excerpt_en" class="form-control" id="exampleTextarea_en" rows="3"
+                                              placeholder="Краткое Описание поста"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                    
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <label class="col-form-label col-lg-3 col-sm-12">Полный текст</label>
+                                        <div id="id3">
+                                            <textarea class="summernote" name="content_en"></textarea>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                          
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kt-portlet">
+                <div class="form-group row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        
+                        <button type="button" class="btn btn-success uploadGallery" style="width: 80%; margin-left: 10%">
+                            Upload images for gallery
+                        </button>
+                        
+                        <div class="dropzoneGallery"></div>
+                    
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+        
+        
+        
+        </div>
+        
+        <div class="col-4">
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__head">
+                    <button style="    height: 35px; margin-top: 10px;" type="reset" class="btn btn-danger deletePost">Удалить</button>
+
+                </div>
+                <div class="kt-portlet__body">
+                    
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Статус</label>
+                 
+                        
+                        <div class="kt-section__content kt-section__content--solid status">
+                            
+                        
+                        </div>
+                    
+                    </div>
+                    
+                    
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Название категории</label>
+                        <div class=" col-lg-12 col-md-12 col-sm-12">
+                           <!-- <select class="form-control m-select2" id="kt_select2_3" name="categories"
+                                    multiple="multiple">
+                                &lt;!&ndash;                            <option></option>&ndash;&gt;
+                            </select>-->
+                            <select class="form-control m-select2" id="kt_select2_3" name="categories">
+                            
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="kt_datetimepicker_4_4" class="col-form-label ">запланировать</label>
+                        <div class="input-group date">
+                            
+                            <input type="text" name="date" class="form-control" placeholder="Bottom right"
+                                   id="kt_datetimepicker_4_3_1">
+                            <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="la la-clock-o glyphicon-th"></i>
+                                            </span>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+                    
+                    <div class="form-group row">
+                        <label class="col-3 col-form-label">Видимость</label>
+                        <div class="col-3">
+                            <span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+                                <label>
+                                    <input type="checkbox"  name="status">
+                                    <span></span>
+                                </label>
+                            </span>
+                        </div>
+                        
+                        <label class="col-3 col-form-label">Авторский</label>
+                        <div class="col-3">	<span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--info">	<label>
+							<input type="checkbox" checked="checked" name="author">
+							<span></span>
+							</label>
+						</span>
+                        </div>
+                    
+                    </div>
+                    
+                    
+                    <button type="button" class="btn btn-danger setFeaturedImage">Изображение поста</button>
+                    <div class="featuredImage"></div>
+                    <input type="hidden" value="<%=postId%>" class="postId">
+                    <button class="btn btn-success btn-custom updatePost" id="savePost">Обновить пост</button>
+                </div>
+            
+            </div>
+        
+        </div>
+    </div>
+    
+
+
+</form>
+<script>
+
+</script>
+<%if(loadPost){%>
+    <script src="/admin/js/loadPost.js"></script></body>
+<%}%>
+<%-include('../include/footer.ejs')%>

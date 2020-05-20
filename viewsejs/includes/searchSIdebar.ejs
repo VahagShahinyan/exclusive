@@ -1,0 +1,63 @@
+<div class="ne-sidebar sidebar-break-md col-lg-4 col-md-12">
+    <%if (bannerJson){%>
+    <%if (bannerJson["6"]){%>
+    <div class="sidebar-box">
+        <div class="ne-banner-layout1 text-center">
+            <%if (bannerJson["6"].status=='img' && bannerJson["6"].img_src){%>
+            <a href="<%=bannerJson["6"].link%>" target="_blank">
+                <img src="<%=bannerJson["6"].img_src%>" alt="ad" class="img-fluid">
+            </a>
+
+            <%}else if(bannerJson["6"].status=='html'  ){%>
+            <%-bannerJson["6"].html -%>
+
+            <%}%>
+
+        </div>
+    </div>
+    <%}%>
+
+
+    <%}%>
+    <div class="sidebar-box">
+        <div class="topic-border color-cod-gray mb-30">
+            <div class="topic-box-lg color-cod-gray">
+                <% if (lang=='am'){%>
+                    Վերջին նորություններ
+                <%}else if (lang=='ru'){%>
+                        Последние новости
+                <%}else if (lang='en'){%>
+                        Latest news
+                    <% }%>
+            </div>
+        </div>
+        <%postsCategory.forEach(function (recentPost) {%>
+        <div class="position-relative mb30-list bg-body">
+            <!--                <div class="topic-box-top-xs">-->
+            <!--                    <div class="topic-box-sm color-cod-gray mb-20">Apple</div>-->
+            <!--                </div>-->
+            <div class="media">
+                <a class="img-opacity-hover" href="/post/<%=recentPost.id%>/<%=lang%>">
+                    <img src="/upload/temp/105/<%=recentPost.featured_image.image_path%>" alt="<%=recentPost.featured_image.image_alt%>" class="img-fluid">
+                </a>
+                <div class="media-body">
+                    <div class="post-date-dark">
+                        <ul>
+                            <li>
+                                      <span> <i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                                <span class="dateTime" value="<%=recentPost.date%>"></span>
+
+
+                            </li>
+                        </ul>
+                    </div>
+                    <h3 class="title-medium-dark mb-none">
+                        <a href="/post/<%=recentPost.id%>/<%=lang%>"><%=recentPost.title%></a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <%})%>
+
+    </div>
+</div>

@@ -1,0 +1,312 @@
+<%-include('../include/header.ejs')%>
+
+<form class="kt-form kt-form--fit " method="post" action="/admin/post/create">
+    <div class="row">
+        <div class="col-8">
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__head">
+
+                    <div class="kt-portlet__head-toolbar">
+                        <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-success nav-tabs-line-2x" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab"
+                                   href="#kt_portlet_base_demo_1_1_tab_content" role="tab" aria-selected="true">
+                                    <i class="la la-language"></i> ARM
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " data-toggle="tab"
+                                   href="#kt_portlet_base_demo_1_2_tab_content" role="tab" aria-selected="true">
+                                    <i class="la la-language"></i> RUS
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " data-toggle="tab" href="#kt_portlet_base_demo_1_3_tab_content"
+                                   role="tab" aria-selected="false">
+                                    <i class="la la-language"></i>ENG
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="kt-portlet__body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="kt_portlet_base_demo_1_1_tab_content" role="tabpanel">
+
+
+                            <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label>Название поста</label>
+
+                                    <input type="text" name="title_am" class="form-control" aria-describedby="emailHelp" placeholder="Название поста"  value="<%=post?post.title_am:''%>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleTextarea_am">Краткое Описание поста</label>
+                                    <textarea name="excerpt_am" class="form-control" id="exampleTextarea_am" rows="3"
+                                              placeholder="Краткое Описание поста"><%=post?post.excerpt_am:''%></textarea>
+                                </div>
+                                <div class="form-group row">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <label class="col-form-label col-lg-3 col-sm-12">Полный текст</label>
+                                        <div id="sum1"><textarea class="mysummernote" name="content_am"><%=post?post.content_am:''%></textarea></div>
+
+                                    </div>
+                                    
+                                   
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="tab-pane" id="kt_portlet_base_demo_1_2_tab_content" role="tabpanel">
+
+
+                            <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label>Название поста</label>
+                                    <input type="text" name="title_ru" class="form-control" aria-describedby="emailHelp"
+                                           placeholder="Название поста" value="<%=post?post.title_ru:''%>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleTextarea_ru">Краткое Описание поста</label>
+                                    <textarea name="excerpt_ru" class="form-control" id="exampleTextarea_ru" rows="3"
+                                              placeholder="Краткое Описание поста"><%=post?post.excerpt_ru:''%></textarea>
+                                </div>
+                                <div class="form-group row">
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <label class="col-form-label col-lg-3 col-sm-12">Полный текст</label>
+                                        <div id="sum2">
+                                            <textarea class="mysummernote" name="content_ru"><%=post?post.content_ru:''%></textarea>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="tab-pane " id="kt_portlet_base_demo_1_3_tab_content" role="tabpanel">
+                            <div class="kt-portlet__body">
+                                <div class="form-group">
+                                    <label>Название поста</label>
+                                    <input type="text" name="title_en" class="form-control" aria-describedby="emailHelp"
+                                           placeholder="Название поста" value="<%=post?post.title_en:''%>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleTextarea_en">Краткое Описание поста</label>
+                                    <textarea name="excerpt_en" class="form-control" id="exampleTextarea_en" rows="3"
+                                              placeholder="Краткое Описание поста"><%=post?post.excerpt_en:''%></textarea>
+                                </div>
+                                <div class="form-group row">
+            
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <label class="col-form-label col-lg-3 col-sm-12">Полный текст</label>
+                                        <div id="sum3">
+                                            <textarea class="mysummernote" name="content_en"><%=post?post.content_en:''%></textarea>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                                
+                                <!--<div class="form-group row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <button type="button" class="btn btn-success uploadGallery">Upload images for gallery</button>
+                                        <div class="dropzoneGallery"></div>
+                                    </div>
+                                </div>-->
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kt-portlet">
+                <div class="form-group row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+            
+                        <button type="button" class="btn btn-success uploadGallery" style="width: 80%; margin-left: 10%">
+                            Загрузить изображения для галереи
+
+                        </button>
+            
+                        <div class="dropzoneGallery">
+                            <%if(post && post.gallery){%>
+
+                                <%post.gallery.forEach(function (image) {%>
+        
+        
+                                        <div class="col-md-3 col-lg-2 DropzonImageBlock">
+                                            <img class="img-fluid " src="/upload/<%=image.image_path%>" alt="<%=image.image_alt%>" data_id="<%=image.image_id%>">
+                                            <div>
+                                                <button type="button" class=" dropzonRemuveBtn btn  btn-outline-danger">
+                                                    <i class="la la-trash"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                               <% })%>
+                        <%}%>
+
+
+                        </div>
+
+
+
+        
+                    </div>
+                </div>
+            </div>
+           
+
+            
+            
+            
+
+
+        </div>
+
+        <div class="col-4">
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__head">
+                    <% if (postId){%>
+                    <button style="    height: 35px; margin-top: 10px;" type="reset" data_id="<%=post.id%>" class="btn btn-danger deletePost">Удалить</button>
+                    <%}%>
+                </div>
+                <div class="kt-portlet__body">
+
+                    <div class="form-group row">
+                        <% if (postId){%>
+                                <label class="col-form-label col-lg-12 col-sm-12">Статус</label>
+                                <div class="kt-section__content kt-section__content--solid status">
+                                    <%if(post.status=='0'){%>
+                                        <span class="kt-badge kt-badge--danger kt-badge--lg">Ч</span>
+                                    <%}else if(post.status=='1'){%>
+                                            <span class="kt-badge kt-badge--success kt-badge--lg">О</span>
+                                    <%}else if(post.status=='2'){%>
+                                            <span class="kt-badge kt-badge--warning kt-badge--lg">З</span>
+                                    <%}%>
+                                </div>
+                        <%}%>
+
+
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Название категории</label>
+                        <div class=" col-lg-12 col-md-12 col-sm-12">
+                            <select class="form-control m-select2" id="kt_select2_3" name="categories">
+                                <%categories.forEach(function (category) {%>
+                                            <%if (postId && category.id==post.cat_id){%>
+                                             <option selected value="<%=category.id%>"><%=category.title%></option>
+                                            <%}else{%>
+                                                 <option value="<%=category.id%>"><%=category.title%></option>
+
+                                                 <%}%>
+                                <%})%>
+
+                            </select>
+
+
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="kt_datetimepicker_4_4" class="col-form-label ">запланировать</label>
+                        <div class="input-group date">
+                            <input type="text" name="date" class="form-control datepicker"  placeholder=""  id="kt_datetimepicker_4_3_1"  dateValue="<%=post?post.date:''%>">
+                            <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="la la-clock-o glyphicon-th"></i>
+                                            </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-3 col-form-label">Видимость</label>
+                        <div class="col-3">
+                            <span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+                                <label>
+                                    <%if(post && (post.status=='2' || post.status=='1')){%>
+                                        <input type="checkbox" checked="checked"  name="status">
+
+                                    <%}else if(post && post.status=='0'){%>
+                                            <input type="checkbox"   name="status">
+
+                                        <%}else {%>
+                                            <input type="checkbox"  checked="checked"  name="status">
+                                        <%}%>
+                                    <span></span>
+                                </label>
+                            </span>
+                        </div>
+
+                        <label class="col-3 col-form-label">Авторский</label>
+                        <div class="col-3">	<span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--info">	<label>
+
+                                    <%if(post && post.author=='1'){%>
+                                        <input type="checkbox" checked="checked"  name="author">
+
+                                    <%}else if(post && post.author=='0'){%>
+                                        <input type="checkbox"   name="author">
+
+                                    <%}else {%>
+                                        <input type="checkbox"    name="author">
+                                    <%}%>
+							<span></span>
+							</label>
+						</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-danger setFeaturedImage">Изображение поста</button>
+
+
+                    <div class="featuredImage">
+                        <%if(post){%>
+                        <div class="col-md-12 col-lg-12 DropzonImageBlock">
+                            <img class="img-fluid "
+                                 src="/upload/<%=post.featured_image.image_path%>"
+                                 alt="<%=post.featured_image.image_alt%>"
+                                 data_id="<%=post.featured_image.image_id%>">
+                            <div>
+                                <button type="button" class=" dropzonRemuveBtn btn  btn-outline-danger"><i class="la la-trash"></i></button>
+                            </div>
+                        </div>
+                        <%}%>
+
+                    </div>
+
+                    <% if (postId){%>
+                    <input type="hidden" value="<%=postId%>" class="postId">
+                    <button class="btn btn-success btn-custom updatePost" id="savePost">Обновить пост</button>
+                    <%}else {%>
+                        <button class="btn btn-success btn-custom createPost" id="savePost">Создать пост</button>
+                    <%}%>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</form>
+<script>
+
+</script>
+
+
+<%if(loadPost){%>
+    <script src="/admin/js/loadPost.js"></script></body>
+<%}%>
+<%-include('../include/footer.ejs')%>

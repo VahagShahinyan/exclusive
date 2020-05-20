@@ -1,0 +1,71 @@
+<%- include('../includes/header.ejs') %>
+
+
+
+<section class="bg-body section-space-less30">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-8 col-md-12">
+                <input type="text" class="form-control mySearch" placeholder="type text for search"
+                       value="<%= searchText?searchText:'' %>">
+
+                <div class="row searchPosts">
+
+                    <% search.forEach(function (item) { %>
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12">
+                        <div class="media media-none--lg mb-30">
+                            <div class="position-relative width-40">
+                                <a href="/post/<%=item.id%>/<%=item.lang %>"
+                                   class="img-opacity-hover img-overlay-70">
+                                    <img src="/upload/temp/389/<%=item.featured_image.image_path%>" alt="news"
+                                         class="img-fluid">
+                                </a>
+
+                            </div>
+                            <div class="media-body p-mb-none-child media-margin30">
+                                <div class="post-date-dark">
+                                    <ul>
+
+                                        <li>
+                                             <span> <i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                             <span class="dateTime" value="<%=item.date%>"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="title-semibold-dark size-lg mb-15">
+                                    <a href="/post/<%= item.id %>/<%= item.lang %>"><%= item['title_' + item.lang] %></a>
+                                </h3>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <% }) %>
+                </div>
+                <div class="row mt-20-r mb-30">
+                    <button class="btn btn-danger loadMoreBtn">
+                             <%if(lang=='am'){%>
+                                Բեռնել ավելին
+                             <%} else if(lang =='ru'){%>
+                                Загрузи больше
+                            <%}else if(lang=='en'){%>
+                                Load more
+                            <%}else {%>
+                                Բեռնել ավելին
+                            <%}%>
+                    </button>
+
+                </div>
+            </div>
+
+
+            <%-include('../includes/searchSIdebar.ejs')%>
+
+        </div>
+    </div>
+</section>
+
+
+<%- include('../includes/moreJS.ejs') %>
+<%- include('../includes/footer.ejs') %>

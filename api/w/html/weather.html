@@ -1,0 +1,22 @@
+<div class="weather">
+    <div class="weather-body">
+        <div class="row">
+            <div class="col-md-6 col-12 mt-2">
+                <h1 id="icon"><i class="wi <%= data.icon %>"></i></h1>
+                <h2 class="temp0">
+                    <i class="wi wi-thermometer"></i>
+                      <%= parseFloat(data.temp).toFixed(1) %>         <sup><small>°C</small> </sup>
+                    / <%= parseFloat(data.temp*9/5+32).toFixed(1)   %><sup><small>°F</small> </sup>
+                </h2>
+            </div>
+            <div class="col-md-6 col-12 mt-3">
+                <h2 class="city"><%=data.cityName %> </h2>
+                <h5 class="iconInfo">
+                    <i class="wi wi-cloud"></i> <%= (data.clouds?data.clouds:0).toFixed(1) %> % 
+                    <i class="wi wi-humidity"></i> <%= data.humidity.toFixed(1) %> % 
+                    <i class="wi wi-strong-wind"></i><%= (data.wind/1.6).toFixed(1) %> <%= data.ms %>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>

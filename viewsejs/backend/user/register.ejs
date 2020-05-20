@@ -1,0 +1,222 @@
+<%-include('../include/header.ejs')%>
+
+<form class="kt-form kt-form--fit " method="post" action="/admin/register/" enctype="application/x-www-form-urlencoded">
+    <div class="row">
+
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__body">
+
+
+
+
+
+
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Имя(am)<span class="required">*</span></label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input required class="form-control" type="text" placeholder="Name" name="name_am" >
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Фамилия(am)<span class="required">*</span></label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input required class="form-control" type="text" placeholder="Last Name" name="lastName_am" >
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Имя(ru)<span class="required">*</span></label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input required class="form-control" type="text" placeholder="Name" name="name_ru" >
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Фамилия(ru)<span class="required">*</span></label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input required class="form-control" type="text" placeholder="Last Name" name="lastName_ru" >
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Имя(en)<span class="required">*</span></label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input required class="form-control" type="text" placeholder="Name" name="name_en" >
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Фамилия(en)<span class="required">*</span></label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input required class="form-control" type="text" placeholder="Last Name" name="lastName_en" >
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Ник(am)</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input class="form-control" type="text" placeholder="nickname" name="nickname_am">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Ник(ru)</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input class="form-control" type="text" placeholder="nickname" name="nickname_ru">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Ник(en)</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input class="form-control" type="text" placeholder="nickname" name="nickname_en">
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Фото</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input class="form-control" type="text" placeholder="image" name="image">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Email<span class="required">*</span></label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                             <input required class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Пароль<span class="required">*</span></label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                             <input required class="form-control" type="password" placeholder="Password" name="password">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Facebook</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input class="form-control" type="text" placeholder="facebook" name="facebook">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Twitter</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input class="form-control" type="text" placeholder="twitter" name="twitter">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">instagram</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input class="form-control" type="text" placeholder="instagram" name="instagram">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">linkedin</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input class="form-control" type="text" placeholder="linkedin" name="linkedin">
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="form-group row">
+                        <label class="col-3 col-form-label">Статус<span class="required">*</span></label>
+
+                        <div class="col-3">
+
+                            <span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+                                 <span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+                                <label>
+                                        <input required type="checkbox"  name="status"  checked>
+
+                                   <span></span>
+                                </label>
+                            </span>
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Роли<span class="required">*</span></label>
+                        <div class="col-lg-4 col-md-4">
+                            <select id="kt_select2_3" class="form-control m-select2s" name="user_role">
+                                <%roles.forEach(function (role) {%>
+                                <option value="<%=role.id%>"><%=role.name%></option>
+                                <%})%>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-3 col-form-label">Статус сотрудник</label>
+
+                        <div class="col-3">
+
+
+
+                        <span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+
+                                <label>
+
+                                        <input type="checkbox"  name="staff" >
+
+                                    <span></span>
+                                </label>
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <button class=" btn btn-success btn-custom " id="" type="submit">добавить пользователя </button>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+
+
+</form>
+
+<%-include('../include/footer.ejs')%>

@@ -1,0 +1,23 @@
+[
+    {
+        "date": "2020-05-19T00:00:00"
+    },
+    {
+        "ISO": "USD",
+        "Amount": "1",
+        "Rate": 484.65,
+        "Difference": "-1.2300"
+    },
+    {
+        "ISO": "EUR",
+        "Amount": "1",
+        "Rate": 530.5,
+        "Difference": "5.4600"
+    },
+    {
+        "ISO": "RUB",
+        "Amount": "1",
+        "Rate": 6.7,
+        "Difference": "0.0300"
+    }
+]

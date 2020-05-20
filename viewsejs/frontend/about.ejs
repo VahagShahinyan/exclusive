@@ -1,0 +1,28 @@
+<%-include('../includes/header.ejs')%>
+
+<section class="bg-body section-space-less30">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 mb-30">
+                <div class="news-details-layout1">
+                    <h1 class="title-semibold-dark size-c30" id="title"> <%=about.title %> <!-- title text --></h1>
+                    <div id="content">
+                             <%-about.content -%>
+                    </div>
+
+                    <%if (isAuth) {%>
+                    <p>
+                        <a href="/admin/page/about/1">Редактировать </a>
+
+                    </p>
+                    <%}%>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<%-include('../includes/moreJS.ejs')%>
+
+<%-include('../includes/footer.ejs')%>

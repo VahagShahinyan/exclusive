@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta property="og:url" content="http://exclusive.am/post/<%=post.id%>/<%=lang%>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<%=post.title %>" />
+    <meta property="og:description" content="<%=post.excerpt%>" />
+    <meta property="og:image" content="http://exclusive.am/upload/temp/600/<%=post.featured_image.image_path%>" />
+    <meta property="og:site_name" content="http://exclusive.am" />
+<!--    <meta property="fb:app_id" content="376709359620369" />-->
+
+    <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAhCAYAAAC4JqlRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA0ppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODNEOUNEMzE4MDA0MTFFOThCNjc4MkE3NjY0QUEyRkYiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODNEOUNEMzA4MDA0MTFFOThCNjc4MkE3NjY0QUEyRkYiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo2N2NlY2YxNy04MDA0LTExZTktOGE0ZC1kMWIxMjAwZDcxNTEiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo2N2NlY2YxNy04MDA0LTExZTktOGE0ZC1kMWIxMjAwZDcxNTEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6+WlXfAAACW0lEQVR42sSXy0sbURTGTzRGqzapT7AgPmhB2oWipdJulHYhFly4EFy6dCe4EUSoUERcSMGuW6o7RaQURPQfsMtSXWhd1je+MOIjNhO/M54hV3EmozOZufAjMzeTOV/O694bSKzRBhE9BVFK38gAeaAfDKtfBCDgGJ+PybvRBcZVZV6P7+C9nwJ4/AAVfgrIB0ugMmjyQAKsg0uQmQYBcVANRswEXIB6sGf6Ck1kOhulVh64+/X/xXi2BNCZiF0zAQEheXcpxh+B4i9E4e5rTyZijhQEbT3FhrNA2WeiSI+iDT8PZKdZgCb2yv8ShZ6r38yCd2DrgbYLwL+grX8fabhtfBR8kOsqBw7ItNcHwn3qXTvodXORsK5WTrr8NmOGXT7jZkMIphSQ24IcyDFmXoNf4I+k5X3GgawBdXZWw3NOOwjY081U7CBapUZpag7+8CD4qNxHrUPATfgMHA4ZzUkjl0eGrSAdjKERraVlVUpdhuwFbnaxTUT9Ril2gCbL9eLm2AbN9xfALTiXN1RN6mwrmPImBBz1yCd1phhMeJMDmhRbXqc6OyciPMgBbsOF6D2hZ8bMAHgl+4W4Q9sc2FNrAXrV76oz0+CrFKfT7Zz+dmsB7P7jZXSAGqKSSXiidsWrMkzuiPiJo1Wik7prpz10B8T5FHqBkH4jymlM2YrP9FZMtJ90lgtRj0vgwjBXNA8hb0wFsLnfIiTLpWrj41+PnkcXMvOk1pej2Vt4dFEPZcyfg8kCjFfrVyF/BPCp6KdRAH4dzV6CRaPIopIDUY+MJ2SN5Y46diXAAH4KhY8QjNSCAAAAAElFTkSuQmCC" />
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css?v=1">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/meanmenu.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="/css/hover-min.css">
+    <link rel="stylesheet" href="/css/style.css?v=4">
+    <link rel="stylesheet" href="/css/ie-only.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/OwlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/vendor/OwlCarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/gallery/lightgallery.min.css">
+    <link rel="stylesheet" href="/css/weather-icons/2.0.9/css/weather-icons.css">
+
+    <title>Exclsuive.am | <%=post.title %></title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62695915-19"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-62695915-19');
+    </script>
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5e487056eac6ff0012aa5834&product=inline-share-buttons" async="async"></script>
+
+
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an
+    <strong>outdated</strong> browser. Please
+    <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+
+
+<!--<div id="preloader"></div>-->
+<div id="wrapper" class="wrapper">
+    <header style="margin-bottom: 80px;    ">
+        <div id="header-layout1" class="header-style1">
+            <div class="main-menu-area bg-primarytextcolor header-menu-fixed" id="sticker">
+                <div class="container">
+                    <div class="row no-gutters d-flex align-items-center">
+                        <div class="col-lg-2 d-none d-lg-block">
+                            <div class="logo-area">
+                                <a href="/<%=lang%>" data-lang="<%=lang%>">
+                                    <!--<img src="/img/logo.png" alt="logo" class="img-fluid">-->
+                                    <!--<img alt="logo" class="img-fluid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAtCAYAAAA3BJLdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjMwMzg2NURBN0VENTExRTlBOTUzRjFBRTY4NjcyQkVBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjMwMzg2NURCN0VENTExRTlBOTUzRjFBRTY4NjcyQkVBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MzAzODY1RDg3RUQ1MTFFOUE5NTNGMUFFNjg2NzJCRUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MzAzODY1RDk3RUQ1MTFFOUE5NTNGMUFFNjg2NzJCRUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz51qMQXAAADIUlEQVR42tSZX0hTURzHv9uu2gz7HxRm/8mIHgt6ChJ7CHropZ4ihcrqLRCiKIgQI0jqMUjIllhGULRCMqQIGhXZSwohZQ1RIXLr73Jm2/qe3aNs3c3tut27swOf3XHOYXzvOb/z+3PmiL1HL4AV5CsK2xykirSQsyknUOwPPiugVmsgrf93OqFmu0pqi0WsaF2kuljElpDuRBNVWaxoq8j9YhEr2g5yW3zRUBxtH/FnEjsh3+wDWVwgoRGygJRpWUwcIEHyJe2sqDwOFdKwYtaoziTWOaNdR+VolRT7jl1/GGm0wohNL9Ilz2oZEH4JHG0CbnTpQVNzqiKWK4flZCEQeg4cOgd09iSM0wQmIyqIFba4lHwH6usBjzelX1xGwhYEiJBmevsptulSSqEbSB8ptcgrfDJnXfPIKNB2M+Wox0KhJiNYVLfVZy/4ikOG0ctkm9UON3uxLt3rtrYbRurIcTuiQ/ZiFwG/+oFbD5J6t5LrdoWy7A8YXVX7RVpDNKn3hHz2yROba5skc8na3MQyS6hendQzhxwme/O8gBv1WJiLGdAL1BwEdtZM9whf+s3OjMZpaoN4yM43Fi5PdJqa+RHYsovJ5W7VxU6tLhOVY0cKI9ZcuHXoj7HRtL/VRjaTwCz1hGdK8jXTr8bV9dxJOSpuUfarYQYi46qkT/EBD3sMo3vIGXVsNqYn2vceGUZWkg61Dpiorz4DV4yyRJlcrpZY5rHeTmB4OKn3mh3ZlvkDxpkDfsOLPiGP9drB0gsTEdqDma48w7J2HcN8fv4E1m1nbBhRPSgE9KuGwTe0W+ZaJS77xWa/sjFZLSzR3XboLdDL6raUCZ3DkR8xbjfwexxoYYZ896l5seNSbCDJhSWIRr7LbrljQ0zyG5qB7lfmVnY9GZFGbvlOcyEmeJijU+n3IKvoutOArz+zWLGO4o+Rv7D+etQh96ojHrYjslZeoyf+Po+6f4BcIKfi3yJyTyvVvUw+SQ5M27BITf1q33yLS5Pa2Sff9jevtNqiEOuW4by8GMRCus7X4l5C04vseE4aVFBoTC7oJtL8T4ABAClrvdVV78opAAAAAElFTkSuQmCC" alt="" />-->
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAYAAABvR+QvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjdFMTM5QUM4N0VENzExRTk5QzdFQTU3QjUzM0JCQzA0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjdFMTM5QUM5N0VENzExRTk5QzdFQTU3QjUzM0JCQzA0Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6N0UxMzlBQzY3RUQ3MTFFOTlDN0VBNTdCNTMzQkJDMDQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6N0UxMzlBQzc3RUQ3MTFFOTlDN0VBNTdCNTMzQkJDMDQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6RldS5AAAI0UlEQVR42uxc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" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-7 position-static min-height-none">
+                            <div class="ne-main-menu">
+                                <nav id="dropdown">
+                                    <ul>
+                                        <% menu.forEach(cat=>{%>
+                                            <li><a href="/cat/<%=cat.id%>/<%=lang%>"><%=cat[`title_${lang}`]%></a></li>
+                                        <%})%>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-12 text-right position-static">
+                            <div class="header-action-item">
+                                <ul>
+                                    <li>
+                                        <form id="top-search-form" class="header-search-light">
+                                            <input type="text" class="search-input" placeholder="Search...." required="" style="display: none;">
+                                            <button class="search-button">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </button>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <span id="langAm"><a href="<%=urlObj.am%>">AM</a></span>
+                                        <span>|</span>
+                                        <span id="langRu"><a href="<%=urlObj.ru%>">RU</a></span>
+                                        <span>|</span>
+                                        <span id="langEn"><a href="<%=urlObj.en%>">EN</a></span>
+                                    </li>
+                                    <li>
+                                        <div id="side-menu-trigger" class="offcanvas-menu-btn">
+                                            <a href="#" class="menu-bar">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                            <a href="#" class="menu-times close">
+                                                <span></span>
+                                                <span></span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

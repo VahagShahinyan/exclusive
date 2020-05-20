@@ -1,0 +1,174 @@
+img {
+    max-width: 100%; /* This rule is very important, please do not ignore this! */
+}
+
+#dropzoneEditor,
+#dropzoneGallery {
+    border: 1px solid black;
+    height: 100px;
+    text-align: center;
+}
+
+.dropzoneEditorImages,
+.dropzoneGallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dropzoneEditorImages >div ,
+.dropzoneGallery > div {
+    background-color: #f1f1f1;
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.img-cropper-a {
+    max-width: 100%;
+}
+
+.cropper-container {
+    max-width: 100%;
+
+}
+.btn i{
+    padding-right: 0 !important;
+}
+
+.kt-subheader{
+    z-index: 999 !important;
+}
+.DropzonImageBlock input{
+    width: 100%;
+    height: 33px;
+    font-size: 12px;
+}
+
+.DropzonImageBlock p { 
+        line-height: 0; 
+     font-size: 0;
+}
+.galleryContainer{
+    padding-left: 3%;
+}
+.galleryContainer::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/****************** Modal gallery image style *******************/
+div.galleryBlock {
+    margin: 5px;
+    /*border: 1px solid #ccc;*/
+    float: left;
+    width: 200px;
+    /*border: 4px solid rgba(129, 129, 134, 0.5);*/
+
+}
+
+div.gallery:hover {
+    /*border: 1px solid #777;*/
+}
+
+div.galleryBlock img {
+    width: 100%;
+    height: auto;
+}
+
+div.galleryBlock .desc {
+    padding: 15px;
+    text-align: center;
+    display: block;
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.dropzonRemuveBtn{
+    width: 100%;
+}
+/****************** Modal gallery image style *******************/
+
+.success{
+    background-color: #34bfa3;
+    color: #fff;
+    letter-spacing: 0.6px;
+    padding: 1px 10px;
+    border-radius: .75rem;
+
+}
+.success::after{
+    content: "Активный";
+
+}
+.pending{
+    background-color:#716aca;
+    color: #fff;
+    letter-spacing: 0.6px;
+    padding: 1px 10px;
+    border-radius: .75rem;
+
+}
+.pending::after{
+    content: "Ожидания";
+
+}
+
+
+.draft{
+    background-color:#f4516c;
+    color: #fff;
+    letter-spacing: 0.6px;
+    padding: 1px 10px;
+    border-radius: .75rem;
+}
+.draft::after{
+    content: "Черновик";
+
+}
+.modal-body{
+    /*height: 700px;*/
+    /*overflow-y: scroll;*/
+}
+
+.author{
+    font-size: 2rem !important;
+}
+.required{
+    color: red;
+    font-size: 15px;
+    margin-left: 3px;
+}
+
+
+#kt_tabs_1_2{
+    height: 600px;
+    overflow-y: scroll;
+}
+
+
+.navTabsNew{
+    position: relative;
+}
+
+.imageSearch{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    display: none;
+}
+.imageSearch input{
+    height: 26px;
+    width: 200px;
+}
+.selectedGalleryImg{
+border: 4px solid rgba(37, 37, 216, 0.8);
+}
+.unSelectedGalleryImg{
+border: 4px solid rgba(129, 129, 134, 0.5)
+
+}
+
+

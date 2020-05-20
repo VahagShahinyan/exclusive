@@ -1,0 +1,446 @@
+<%-include('../includes/header.ejs')%>
+<section class="container  section-space-less2" style="    margin-top: 1px;  ">
+    <div class="">
+        <div class="section-space-bottom-less4" style="padding: 0 0 10px 0;">
+            <div class="row tab-space2 ">
+                <div class="col-lg-5 col-md-12">
+                    <div class="img-overlay-70 img-scale-animate mb-4 political-main slide1">
+                        <% var politicalCount=0 %>
+                        <% result.forEach(post=>{%>
+                            <% if(post.cat_id=='2' && politicalCount ==0){%>
+                            <img src="/upload/temp/800/<%=post.featured_image.image_path%>"    alt="<%post.featured_image.image_alt%>"  class="img-fluid width-100">
+                            <div class="mask-content-lg">
+                                <div class="topic-box-sm color-cod-gray mb-20"><%=post.cat_title%></div>
+                                <div class="post-date-light">
+                                    <ul>
+                                        <li>
+                                            <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                            <span class="dateTime" value="<%=post.date%>"></span>
+
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h1 class="title-medium-light">
+                                    <a href="/post/<%=post.id%>/<%=lang%>"><%=post.title%></a>
+                                </h1>
+                            </div>
+                            <% politicalCount=1 %>
+                            <%}%>
+
+                        <%})%>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <div class="row tab-space2 political-secondary ">
+                        <!--qaghakan 2-->
+                        <% var politicalSecondCount=0 %>
+                        <% result.forEach(post=>{ %>
+                            <% if(post.cat_id=='2' && politicalSecondCount ==1){%>
+                            <div class="col-sm-6 col-12">
+                                <div class="img-overlay-70 img-scale-animate mb-4">
+                                    <div class="mask-content-sm">
+                                        <div class="topic-box-sm color-cod-gray mb-10"><%=post.cat_title%></div>
+                                        <h3 class="title-medium-light">
+                                            <a href="/post/<%=post.id%>/<%=lang%>"><%=post.title%> </a>
+                                        </h3>
+                                    </div>
+
+                                    <img src="/upload/temp/560/<%=post.featured_image.image_path%>" alt="<%=post.featured_image.image_alt%>" class="img-fluid width-100">
+                                </div>
+                            </div>
+                            <%}else if(post.cat_id=='2' && politicalSecondCount ==0){%>
+                                <% politicalSecondCount=1   %>
+                            <%}%>
+                        <%})%>
+                        <!--qaghakan 2-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--News block-->
+
+<section class="bg-body section-space-default">
+    <div class="container">
+        <div class="row tab-space1 mb-25 ">
+            <div class="col-12">
+                <div class="topic-border color-apple mb-30 width-100">
+                    <div class="topic-box-lg color-persian-green ">
+                        <a class="color-link" href="/cat/<%=menu[0].id%>/<%=lang%>"><%=menu[0][`title_${lang}`]%></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <% result.forEach(post=>{ %>
+                <% if(post.cat_id=='1'){%>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-6 ">
+                    <div class="img-overlay-70 img-scale-animate mb-2">
+                        <div class="mask-content-xs">
+                            <div class="post-date-light">
+                                <ul>
+                                    <li>
+                                                        <span>
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </span>
+                                        <span class="dateTime" value="<%=post.date%>"></span>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3 class="title-medium-light">
+                                <a href="/post/<%=post.id%>/<%=lang%>"><%=post.title%> </a>
+                            </h3>
+                        </div>
+
+                        <img src="/upload/temp/560/<%=post.featured_image.image_path%>" alt="<%=post.featured_image.image_alt%>"  class="img-fluid width-100">
+                    </div>
+                </div>
+                <%}%>
+            <%})%>
+        </div>
+        <%if (bannerJson){%>
+        <div class="row">
+            <div class="col-12">
+                <div class="ne-banner-layout1 mb-50 mt-20-r text-center">
+                    <%if (bannerJson["1"]){%>
+                    <%if (bannerJson["1"].status=='img' && bannerJson["1"].img_src){%>
+                                    <a href="<%=bannerJson["1"].link%>" target="_blank">
+                                        <img src="<%=bannerJson["1"].img_src%>" alt="ad" class="img-fluid">
+                                    </a>
+                    <%}else if(bannerJson["1"].status=='html' && bannerJson["1"].html ){%>
+                    <%-bannerJson["1"].html -%>
+                        <%}%>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</section>
+<!--News block-->
+
+
+
+<section class="bg-body section-space-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <!-- interv-->
+
+                <div class="interview">
+                    <div class="topic-border color-persian-green mb-30">
+                        <div class="topic-box-lg color-persian-green interviewCatTitle ">
+                            <a class="color-link" href="/cat/<%=menu[2].id%>/<%=lang%>"><%=menu[2][`title_${lang}`]%></a>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 mb-30">
+                            <div class="img-overlay-70 img-scale-animate interviewMain">
+
+                                <% var interviewCount=0 %>
+                                <% result.forEach(post=>{ %>
+
+                                    <% if(post.cat_id=='3' && interviewCount ==0){%>
+                                    <a href="/post/<%=post.id%>/am">
+                                        <img
+                                                src="/upload/temp/750/<%=post.featured_image.image_path%>"
+                                                alt="<%=post.featured_image.image_alt%>"
+                                                class="img-fluid width-100">
+                                    </a>
+                                    <div class="mask-content-lg">
+                                        <div class="topic-box-sm color-apple mb-20"><%=post.cat_title%></div>
+                                        <div class="post-date-light">
+                                            <ul><li> <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                                    <span class="dateTime" value="<%=post.date%>"></span>
+
+                                                </li></ul>
+                                        </div>
+                                        <h2 class="title-medium-light size-lg">
+                                            <a href="/post/<%=post.id%>/<%=lang%>"><%=post.title%></a>
+                                        </h2>
+                                    </div>
+                                    <% interviewCount=1 %>
+                                    <%}%>
+                                <%})%>
+
+
+
+                                <!-------------------------------------------------->
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12 interviewSecond">
+
+                            <% var interviewCount2=1 %>
+                            <% result.forEach(post=>{ %>
+
+                                <% if(post.cat_id=='3' && interviewCount2 ==0){%>
+                                <div class="media bg-body item-shadow-gray mb-30">
+                                    <a class="img-opacity-hover width34-lg width30-md" href="/post/<%=post.id%>/<%=lang%>">
+                                        <img  src="/upload/temp/105/<%=post.featured_image.image_path%> "  alt="<%=post.featured_image.image_alt%>" class="img-fluid">
+                                    </a>
+                                    <div class="media-body media-padding15">
+                                        <div class="post-date-dark">
+                                            <ul>
+                                                <li>
+                                                            <span>
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                    <span class="dateTime" value="<%=post.date%>"></span>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h3 class="title-medium-dark mb-none">
+                                            <a href="/post/<%=post.id%>/<%=lang%>"><%=post.title%></a>
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <%}else if(post.cat_id=='3' && interviewCount2==1){%>
+                                    <% interviewCount2=0;%>
+                                <%}%>
+                            <%})%>
+                        </div>
+                    </div>
+
+                    <%if (bannerJson){%>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="ne-banner-layout1 mb-50 mt-20-r text-center">
+                                <%if (bannerJson["2"]){%>
+                                <%if (bannerJson["2"].status=='img' && bannerJson["2"].img_src){%>
+                                <a href="<%=bannerJson["2"].link%>" target="_blank">
+                                    <img src="<%=bannerJson["2"].img_src%>" alt="ad" class="img-fluid">
+                                </a>
+                                <%}else if(bannerJson["2"].status=='html' && bannerJson["2"].html ){%>
+                                <%-bannerJson["2"].html -%>
+                                <%}%>
+                                <%}%>
+                            </div>
+                        </div>
+                    </div>
+                    <%}%>
+
+
+                </div>
+
+                <!--    interv-->
+                <!--Sport block-->
+                <div class="row tab-space1 mb-25 sport">
+                    <div class="col-12">
+                        <div class="topic-border color-apple mb-30 width-100">
+                            <div class="topic-box-lg color-apple sportCateTitle">
+                                <a class="color-link" href="/cat/<%=menu[3].id%>/<%=lang%>"><%=menu[3][`title_${lang}`]%></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <% result.forEach(post=>{ %>
+                        <% if(post.cat_id=='4'){%>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-6 ">
+                            <div class="img-overlay-70 img-scale-animate mb-2">
+                                <div class="mask-content-xs">
+                                    <div class="post-date-light">
+                                        <ul>
+                                            <li>
+                                                        <span>
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </span>
+                                                <span class="dateTime" value="<%=post.date%>"></span>
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <h3 class="title-medium-light">
+                                        <a href="/post/<%=post.id%>/<%=lang%>"><%=post.title%> </a>
+                                    </h3>
+                                </div>
+                                <img src="/upload/temp/560/<%=post.featured_image.image_path%>" alt="<%=post.featured_image.image_alt%>"  class="img-fluid width-100">
+                            </div>
+                        </div>
+                        <%}%>
+                    <%})%>
+                </div>
+                <!--Sport block-->
+
+            </div>
+
+        </div>
+        <%if (bannerJson){%>
+        <div class="row">
+            <div class="col-12">
+                <div class="ne-banner-layout1 mb-50 mt-20-r text-center">
+                    <%if (bannerJson["3"]){%>
+                    <%if (bannerJson["3"].status=='img' && bannerJson["3"].img_src){%>
+                    <a href="<%=bannerJson["3"].link%>" target="_blank">
+                        <img src="<%=bannerJson["3"].img_src%>" alt="ad" class="img-fluid">
+                    </a>
+                    <%}else if(bannerJson["3"].status=='html' && bannerJson["3"].html ){%>
+                    <%-bannerJson["3"].html -%>
+                    <%}%>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</section>
+
+
+<!--Editor Picks11-->
+
+<!--Editor Picks11-->
+
+<!-- *****************6,7***********************-->
+<section class="bg-body section-space-less30">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="topic-border color-hollywood-cerise mb-30">
+                    <div class="topic-box-lg color-hollywood-cerise ">
+                        <a class="color-link" href="/cat/<%=menu[4].id%>/<%=lang%>"><%=menu[4][`title_${lang}`]%></a>
+
+                    </div>
+                </div>
+                <div class="row fashionPost">
+
+                    <% result.forEach(post=>{ %>
+                        <% if(post.cat_id=='5'){%>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                            <div class="mb-25">
+                                <a class="img-opacity-hover" href="/post/<%=post.id%>/<%=lang%>">
+                                    <img  src="/upload/temp/560/<%=post.featured_image.image_path%> "
+                                          alt="<%=post.featured_image.image_alt%>" class="img-fluid width-100 mb-15">
+                                </a>
+                                <div class="post-date-dark">
+                                    <ul>
+                                        <li>
+                                                    <span>
+                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                    </span>
+                                            <span class="dateTime" value="<%=post.date%>"></span>
+
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h3 class="title-medium-dark size-lg">
+                                    <a href="/post/<%=post.id%>/<%=lang%>"><%=post.title%></a>
+                                </h3>
+                            </div>
+                        </div>
+
+                        <%}%>
+                    <%})%>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <%if (bannerJson){%>
+        <div class="row">
+            <div class="col-12">
+                <div class="ne-banner-layout1 mb-50 mt-20-r text-center">
+                    <%if (bannerJson["4"]){%>
+                    <%if (bannerJson["4"].status=='img' && bannerJson["4"].img_src){%>
+                    <a href="<%=bannerJson["4"].link%>" target="_blank">
+                        <img src="<%=bannerJson["4"].img_src%>" alt="ad" class="img-fluid">
+                    </a>
+                    <%}else if(bannerJson["4"].status=='html' && bannerJson["4"].html ){%>
+                    <%-bannerJson["4"].html -%>
+                    <%}%>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</section>
+
+<!-- *****************6,7***********************-->
+
+
+
+<section class="bg-body section-space-less2">
+    <div class="container">
+        <div class="row tab-space1 lifestyle">
+            <% result.forEach(post=>{ %>
+                <% if(post.cat_id=='8'){%>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="category-box-layout1 overlay-dark-level-2 img-scale-animate text-center mb-2">
+                        <img src="/upload/temp/560/<%=post.featured_image.image_path%>"
+                             alt="<%=post.featured_image.image_alt%>" class="img-fluid width-100">
+                        <div class="content p-30-r">
+                            <div class="ctg-title-xs"><%=post.cat_title%></div>
+                            <h3 class="title-regular-light size-lg">
+                                <a href="/post/<%=post.id%>/<%=lang%>"><%=post.title%></a>
+                            </h3>
+                            <div class="post-date-light">
+                                <ul>
+                                    <li>
+                                                <span>
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                </span>
+                                        <span class="dateTime" value="<%=post.date%>"></span>
+
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <%}%>
+            <%})%>
+
+
+        </div>
+        <%if (bannerJson){%>
+        <div class="row">
+            <div class="col-12">
+                <div class="ne-banner-layout1 mb-50 mt-20-r text-center">
+                    <%if (bannerJson["5"]){%>
+                    <%if (bannerJson["5"].status=='img' && bannerJson["5"].img_src){%>
+                    <a href="<%=bannerJson["5"].link%>" target="_blank">
+                        <img src="<%=bannerJson["5"].img_src%>" alt="ad" class="img-fluid">
+                    </a>
+                    <%}else if(bannerJson["5"].status=='html' && bannerJson["5"].html ){%>
+                    <%-bannerJson["5"].html -%>
+                    <%}%>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</section>
+
+
+
+
+
+
+<%-include('../includes/moreJS.ejs')%>
+
+<%-include('../includes/footer.ejs')%>
+
+
+
+
+

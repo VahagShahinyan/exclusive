@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": -117.82,
+        "lat": 33.67
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 22.92,
+        "feels_like": 19.93,
+        "temp_min": 21.67,
+        "temp_max": 23.89,
+        "pressure": 1017,
+        "humidity": 46
+    },
+    "visibility": 16093,
+    "wind": {
+        "speed": 4.6,
+        "deg": 200
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1590008457,
+    "sys": {
+        "type": 1,
+        "id": 5876,
+        "country": "US",
+        "sunrise": 1589978822,
+        "sunset": 1590029338
+    },
+    "timezone": -25200,
+    "id": 5359777,
+    "name": "Irvine",
+    "cod": 200
+}

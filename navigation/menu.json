@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title_am": "Լուրեր",
+        "title_ru": "Новости",
+        "title_en": "News"
+    },
+    {
+        "id": 2,
+        "title_am": "ՔԱՂԱՔԱԿԱՆ",
+        "title_ru": "ПОЛИТИКА",
+        "title_en": "POLITICAL"
+    },
+    {
+        "id": 3,
+        "title_am": "ՀԱՐՑԱԶՐՈՒՅՑ",
+        "title_ru": "ИНТЕРВЬЮ",
+        "title_en": "INTERVIEW"
+    },
+    {
+        "id": 4,
+        "title_am": "ՍՊՈՐՏ",
+        "title_ru": "СПОРТ ",
+        "title_en": "sport"
+    },
+    {
+        "id": 5,
+        "title_am": "Նորություններ",
+        "title_ru": "ЖИЗНЬ",
+        "title_en": "Life"
+    },
+    {
+        "id": 8,
+        "title_am": "Lifestyle",
+        "title_ru": "СТИЛЬ ЖИЗНИ",
+        "title_en": "Lifestyle"
+    },
+    {
+        "id": 9,
+        "title_am": "Events",
+        "title_ru": "Мероприятия",
+        "title_en": "Events"
+    }
+]

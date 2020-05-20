@@ -1,0 +1,183 @@
+<%-include('../include/header.ejs')%>
+<!--<div class="alert alert-light alert-elevate" role="alert">-->
+<!--</div>-->
+<div class="kt-portlet kt-portlet--mobile">
+    <div class="kt-portlet__body">
+
+
+
+        <!--begin: Datatable -->
+        <table class="table table-striped- table-bordered table-hover table-checkable" id="">
+
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Имя </th>
+                <th>Фамилия</th>
+                <th>Статус</th>
+                <th>Статус</th>
+                <th>Действия</th>
+            </tr>
+            </thead>
+            <tbody>
+
+                <% users.forEach(function(user) {%>
+                <tr>
+                    <td><%=user.id%></td>
+                    <td><%=user.name_am%></td>
+                    <td><%=user.lastName_am%></td>
+                    <td>
+                        <% if (user.status==0) { %>
+                            <span class="draft"></span>
+                        <%}else if (user.status==1) {%>
+                                <span class="success"></span>
+                            <%}else if (user.status==2) {%>
+                                <span class="pending"></span>
+                            <%}%>
+                    </td>
+                    <td>
+
+                        <%=user.user_role%>
+                    </td>
+
+                    <td>
+                        <a href="/admin/users/edit/<%=user.id%>" class="m-portlet__nav-link btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" title="View">
+                            <i class="la la-edit"></i>
+                        </a>
+<!--                        <a href="#" class="m-portlet__nav-link btn m-btn m-btn&#45;&#45;hover-brand m-btn&#45;&#45;icon m-btn&#45;&#45;icon-only m-btn&#45;&#45;pill" title="View">-->
+<!--                            <i class="la la-remove"></i>-->
+<!--                        </a>-->
+                    </td>
+                </tr>
+                <%});%>
+
+
+
+
+
+            </tbody>
+
+
+            <tfoot>
+            <tr>
+                <th>ID</th>
+                <th>Имя </th>
+                <th>Фамилия</th>
+                <th>Статус</th>
+                <th>Статус</th>
+                <th>Действия</th>
+            </tr>
+            </tfoot>
+        </table>
+
+    </div>
+
+
+    <!--end: Datatable -->
+</div>
+</div>
+<!--
+<script>
+    var postData='';
+    function setDataTable() {
+
+    }
+
+    var srcUrl="/upload/";
+    var postUrl="/admin/post";
+    document.addEventListener("DOMContentLoaded", function () {
+
+        var page=1;
+        $.ajax({
+            url: "/admin/posts/"+page+"/",
+            data: JSON.stringify( {'page':page}),
+            type: 'POST',
+            dataType: 'json',
+            cache: false,
+            processData: false,
+            contentType: 'application/json; charset=utf-8',
+            success: function (res) {
+
+                res.forEach(function (item) {
+                    postData += `<tr><td>${item.id }</td><td>${item.title_am }</td>
+                                <td>${item.cat_title_am }</td>
+                                <td>lang</td>
+                                <td>${item.status }</td>
+                                <td>${item.author}</td>
+                                <td>${item.user }</td>
+                                <td><img width="50" src="${srcUrl+'temp/105/'+item.featured_image[2] }" alt="${item.featured_image[1]}"> </td>
+                                <td>${item.date }</td>
+                                <td>
+                                        <a href="#" class="btn btn-sm btn-clean btn-icon btn-icon-md deletePost" data_id="${item.id}" title="delete">
+                                            <i class="la la-trash-o"></i>
+                                        </a>
+                                        <a href="${postUrl}/${item.id}/edit" class="btn btn-sm btn-clean btn-icon btn-icon-md" title="View">
+                                            <i class="la la-edit"></i>
+                                        </a>
+                        </td>
+                            </tr>
+                            `
+
+                });
+
+                // var htmlObject = document.createElement('tr');
+                // var dHtml= htmlObject.innerHTML = postData;
+
+                document.querySelector('#kt_table_1 tbody').innerHTML=postData
+
+
+                var postId;
+                document.querySelectorAll('a.deletePost').forEach(function (item) {
+
+                    item.addEventListener('click',function (e) {
+                        e.preventDefault();
+                        if (e.target.classList.contains("deletePost")) {
+                            postId=e.target.getAttribute('data_id')
+
+                        }
+                        else if (e.target.parentElement.classList.contains("deletePost")) {
+                            postId=e.target.parentElement.getAttribute('data_id')
+
+                        }
+
+                        $.ajax({
+                            url: "/admin/post/"+postId+"/",
+                            data: JSON.stringify( {'postId':postId}),
+                            type: 'DELETE',
+                            dataType: 'json',
+                            cache: false,
+                            processData: false,
+                            contentType: 'application/json; charset=utf-8',
+                            success: function (res) {
+                                window.location.href = "/admin/posts";
+
+
+                            }
+                        })
+
+
+
+
+
+
+
+                    })
+
+                })
+
+            }
+        })
+    });
+
+
+
+
+
+
+
+
+
+
+</script>-->
+
+<%-include('../include/footer.ejs')%>

@@ -1,0 +1,152 @@
+<%-include('../includes/headerPost.ejs')%>
+    <section class="bg-body section-space-less30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mb-30">
+                    <div class="news-details-layout1">
+                        <div class="position-relative mb-30">
+                            <!--  featured_image--> 
+                            <img src="/upload/temp/600/<%=post.featured_image.image_path%>" alt="<%=post.featured_image.image_alt%>" class="img-fluid " id="featured_image">
+                            <div class="topic-box-top-sm ">
+                                <!-- postCatTitle -->
+                                <div class="topic-box-sm color-cinnabar mb-20 postCatTitle"><%=post.cat_title %></div>
+                            </div>
+                        </div>
+                        
+                        <h1 class="title-semibold-dark size-c30" id="title"> <%=post.title %> <!-- title text --></h1>
+                        <ul class="post-info-dark mb-30">
+
+                            <li>
+                                <i class="fa fa-calendar" aria-hidden="true"></i><span id="date"></span>
+                                <span class="dateTime" value="<%=post.date%>"></span>
+
+                            </li>
+
+
+                        </ul>
+                        <div id="content">
+<!-- content -->       <%-post.content -%>
+                        </div>
+                        <div style="float: right">
+                            <%if(+post.author){%>
+                            <%if(lang=='am'){%>
+                                Հեղինակ:
+                            <%}else if(lang=='ru'){%>
+                                Автор:
+                            <%}else if(lang=='en'){%>
+                                Author:
+                           <%}else{%>
+                                    Հեղինակ:
+                            <%}%>
+
+                            <b><%=post.nicname%></b>
+                            <%}%>
+                        </div>
+                        <!--GALLERY BLOCK-->
+                        <div id="lightgallery">
+                            <% if(post.gallery && post.gallery[0]) {%>
+                                <% post.gallery.forEach(image => { %>
+                                <a href="/upload/<%=image.image_path%>" alt="<%=image.image_alt%>">
+                                    <img src="/upload/temp/105/<%=image.image_path%>" alt="<%=image.image_alt%>" />
+                                </a>
+                                <%})%>
+                            <%}%>
+
+                        </div>
+                        <!--GALLERY BLOCK-->
+                        <ul class="blog-tags item-inline">
+<!--                           <li>Tags</li>-->
+<!--                            <li>-->
+<!--                                <a href="#">#Քաղաքական</a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#">#Հարցազրույց</a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#">#Սպորտ</a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#">#Նորաձևություն</a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#">#Գեղեցկություն</a>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <a href="#">#Lifestyle</a>-->
+<!--                            </li>-->
+
+
+                        </ul>
+                        <div class="post-share-area mb-40 item-shadow-1">
+                            <div class="sharethis-inline-share-buttons"></div>
+
+                            <!-- Put this script tag to the <head> of your page -->
+<!--                            <script type="text/javascript" src="https://vk.com/js/api/share.js?95" charset="windows-1251"></script>-->
+
+<!--                            &lt;!&ndash; Put this script tag to the place, where the Share button will be &ndash;&gt;-->
+<!--                            <script type="text/javascript">&lt;!&ndash;-->
+<!--                                document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"}));-->
+<!--                                &ndash;&gt;</script>-->
+
+<!--                            <a href="https://vk.com/share.php?url=http://localhost/post/<%=post.id%>/<%=lang%>" target="_blank">-->
+<!--                                <img src="https://vk.com/images/share_32.png" alt="">-->
+<!--                            </a>-->
+
+
+
+<!--                            <ul class="social-default item-inline">-->
+<!--                                <li>-->
+<!--                                    <a href="#" class="facebook">-->
+<!--                                        <i class="fa fa-facebook" aria-hidden="true"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#" class="twitter">-->
+<!--                                        <i class="fa fa-twitter" aria-hidden="true"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#" class="google">-->
+<!--                                        <i class="fa fa-google-plus" aria-hidden="true"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#" class="pinterest">-->
+<!--                                        <i class="fa fa-pinterest" aria-hidden="true"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#" class="rss">-->
+<!--                                        <i class="fa fa-rss" aria-hidden="true"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <a href="#" class="linkedin">-->
+<!--                                        <i class="fa fa-linkedin" aria-hidden="true"></i>-->
+<!--                                    </a>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+                        </div>
+                        <%if (isAuth) {%>
+                        <a href="/admin/post/<%=post.id%>/edit">Редактировать пост</a>
+                        <%}%>
+
+                    </div>
+
+
+                </div>
+                <%-include('../includes/sidebar.ejs')%>
+
+            </div>
+        </div>
+
+     </section>
+
+
+<%-include('../includes/moreJS.ejs')%>
+
+
+
+
+
+<%-include('../includes/footer.ejs')%>

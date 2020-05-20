@@ -1,0 +1,61 @@
+<%-include('../include/header.ejs')%>
+
+<form class="kt-form kt-form--fit " method="post" action="/admin/category/update" enctype="application/x-www-form-urlencoded">
+    <div class="row">
+
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__body">
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Название Армянский</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input required type="text" value="<%=category.title_am%>" name="title_am" class="form-control" aria-describedby="emailHelp" placeholder="Название Армянский">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Название Русский</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input required type="text" value="<%=category.title_ru%>" name="title_ru" class="form-control" aria-describedby="emailHelp" placeholder="Название Русский">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-lg-12 col-sm-12">Название Английский</label>
+                        <div class=" col-lg-6 col-md-6 col-sm-6">
+                            <input required type="text" value="<%=category.title_en%>" name="title_en" class="form-control" aria-describedby="emailHelp" placeholder="Название Английский">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-3 col-form-label">Статус</label>
+
+                        <div class="col-3">
+
+                            <span class="kt-switch kt-switch--outline kt-switch--icon kt-switch--success">
+
+                                <label>
+                                        <% if (category.status==1) {%>
+                                        <input type="checkbox"  name="status"  checked>
+
+                                           <%}else {%>
+                                                <input type="checkbox"  name="status" >
+
+                                            <%}%>
+                                    <span></span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <input type="hidden" name="id" value="<%=category.id%>">
+
+                        <button class=" btn btn-success btn-custom " id="" type="submit">Обновить категорию </button>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+
+
+</form>
+
+<%-include('../include/footer.ejs')%>

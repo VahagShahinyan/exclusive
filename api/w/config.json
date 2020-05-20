@@ -1,0 +1,105 @@
+{
+    "apiKey":"43a2daf7c9a379df81c7f1ba5e8db3ca",
+    "jsonPath":"json/",
+    "schedule":"* */2 * * * *",
+
+
+
+    "translation":{
+        "ms_am":"մ/վ",
+        "ms_ru":"м/с",
+        "ms_en":"m/s"
+    },
+    "langList":[
+        "am","ru","en"
+    ],
+    "cities":[
+        {
+            "id": 616051,
+            "key": "yerevan_armenia",
+            "name_ru": "Ереван,Армения",
+            "name_am": "Երևան,Հայաստան",
+            "name_en": "Yerevan,Armenia",
+            "likeName":"yerevan_armenia"
+        },
+
+
+
+        {
+            "id": 616635,
+            "key": "gyumri_armenia",
+            "name_ru": "Гюмри,Армения",
+            "name_am": "Գյումրի,Հայաստան",
+            "name_en": "Gyumri,Armenia",
+            "likeName":"gyumri_armenia"
+        },
+        {
+            "id": 617026,
+            "key": "abovyan_armenia",
+            "name_ru": "Абовян,Армения",
+            "name_am": "Աբովյան,Հայաստան",
+            "name_en": "Abovyan,Armenia",
+            "likeName":"abovyan_armenia"
+        },
+        {
+            "id": 616530,
+            "key": "vanadzor_armenia",
+            "name_ru": "Ванадзор,Армения",
+            "name_am": "Վանաձոր,Հայաստան",
+            "name_en": "Vanadzor,Armenia",
+            "likeName":"vanadzor_armenia"
+        },
+        {
+            "id": 616530,
+            "key": "vagharshapat_armenia",
+            "name_ru": "Вагаршапат,Армения",
+            "name_am": "Վաղարշապատ,Հայաստան",
+            "name_en": "Vagharshapat,Armenia",
+            "likeName":"vagharshapat_armenia"
+        },
+
+
+        {
+            "id": 5359777,
+            "key": "irvine_us",
+            "name_ru": "Ирвин,США",
+            "name_am": "Իրվին,ԱՄՆ",
+            "name_en": "Irvine,US",
+            "likeName":"irvine_us"
+        },
+
+        {
+            "id": 524901,
+            "key": "moscow_russia",
+            "name_ru": "Москва,Россия",
+            "name_en": "Moscow,Russia",
+            "name_am": "Մոսկվա,Ռուսաստան",
+            "likeName":"moscow_russia"
+        },
+        {
+            "id": 5368361,
+            "key": "los_angeles_us",
+            "name_ru": "Лос-Анджелес,США",
+            "name_am": "Լոս Անջելես,ԱՄՆ",
+            "name_en": "Los-Angeles,US",
+            "likeName":"los_angeles_us"
+        },
+        {
+            "id": 5295985,
+            "key": "glendale_us",
+            "name_ru": "Глендейл,США",
+            "name_am": "Գլենդեյլ,ԱՄՆ",
+            "name_en": "Glendale,US",
+            "likeName":"glendale_us"
+        }
+
+    ],
+    "icons":{
+        "Drizzle": "wi-raindrops",
+        "Rain": "wi-night-rain",
+        "Thunderstorm": "wi-night-sleet-storm",
+        "Snow": "wi-night-alt-snow",
+        "Clouds": "wi-cloud",
+        "Clear": "wi-day-sunny"
+    }
+}

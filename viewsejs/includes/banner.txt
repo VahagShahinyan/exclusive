@@ -1,0 +1,244 @@
+<%-include('../include/header.ejs')%>
+
+<form class="kt-form kt-form--fit " method="post"
+      action="/admin/page/banner/update"
+
+
+>
+    <div class="row">
+        <div class="col-8">
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__head">
+
+<!--                    <div class="kt-portlet__head-toolbar">-->
+<!--                        <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-success nav-tabs-line-2x" role="tablist">-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link active" data-toggle="tab"-->
+<!--                                   href="#kt_portlet_base_demo_1_1_tab_content" role="tab" aria-selected="true">-->
+<!--                                    <i class="la la-language"></i> ARM-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link " data-toggle="tab"-->
+<!--                                   href="#kt_portlet_base_demo_1_2_tab_content" role="tab" aria-selected="true">-->
+<!--                                    <i class="la la-language"></i> RUS-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            <li class="nav-item">-->
+<!--                                <a class="nav-link " data-toggle="tab" href="#kt_portlet_base_demo_1_3_tab_content"-->
+<!--                                   role="tab" aria-selected="false">-->
+<!--                                    <i class="la la-language"></i>ENG-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+                </div>
+                <div class="kt-portlet__body">
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12"> Новости</label>
+                            <div id="sum1">
+                                <textarea class="mysummernote" name="banner1"><%=banner?banner[0].content:''%></textarea></div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">ИНТЕРВЬЮ</label>
+                            <div id="sum2">
+                                <textarea class="mysummernote" name="banner2"><%=banner?banner[1].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">СПОРТ</label>
+                            <div id="sum3">
+                                <textarea class="mysummernote" name="banner3"><%=banner?banner[2].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">ЖИЗНЬ</label>
+                            <div id="sum4">
+                                <textarea class="mysummernote" name="banner4"><%=banner?banner[3].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">СТИЛЬ ЖИЗНИ</label>
+                            <div id="sum5">
+                                <textarea class="mysummernote" name="banner5"><%=banner?banner[4].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">боковая панель</label>
+                            <div id="sum6">
+                                <textarea class="mysummernote" name="banner6"><%=banner?banner[5].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col-4">
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__head">
+
+                </div>
+                <div class="kt-portlet__body">
+
+                    <% if (banner){%>
+                    <input type="hidden" value="<%=banner.id%>" name="id" class="postId">
+                    <button class="btn btn-success btn-custom updatePost" id="savePost">Обновить </button>
+                    <%}else {%>
+                        <button class="btn btn-success btn-custom createPost" id="savePost">Создать </button>
+                    <%}%>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</form>
+<script>
+
+
+
+
+</script>
+
+<%-include('../include/footer.ejs')%>
+
+
+___________________________________________
+
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__head">
+
+
+                </div>
+                <div class="kt-portlet__body">
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12"> Новости</label>
+                            <div id="sum1">
+                                <textarea class="mysummernote" name="banner1"><%=banner?banner[0].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">ИНТЕРВЬЮ</label>
+                            <div id="sum2">
+                                <textarea class="mysummernote" name="banner2"><%=banner?banner[1].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">СПОРТ</label>
+                            <div id="sum3">
+                                <textarea class="mysummernote" name="banner3"><%=banner?banner[2].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">ЖИЗНЬ</label>
+                            <div id="sum4">
+                                <textarea class="mysummernote" name="banner4"><%=banner?banner[3].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">СТИЛЬ ЖИЗНИ</label>
+                            <div id="sum5">
+                                <textarea class="mysummernote" name="banner5"><%=banner?banner[4].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <label class="col-form-label col-lg-3 col-sm-12">боковая панель</label>
+                            <div id="sum6">
+                                <textarea class="mysummernote" name="banner6"><%=banner?banner[5].content:''%></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+

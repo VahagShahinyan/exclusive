@@ -1,0 +1,91 @@
+<%-include('../include/header.ejs')%>
+
+
+    <div class="row">
+        <div class="col-12">
+
+            <div class="kt-portlet kt-portlet--tabs">
+                <div class="kt-portlet__head">
+
+                    <div class="kt-portlet__head-toolbar">
+                        <ul class="nav nav-tabs nav-tabs-line nav-tabs-line-success nav-tabs-line-2x" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab"
+                                   href="#kt_portlet_base_demo_1_1_tab_content" role="tab" aria-selected="true">
+                                    <i class="la la-language"></i> картинка
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " data-toggle="tab"
+                                   href="#kt_portlet_base_demo_1_2_tab_content" role="tab" aria-selected="true">
+                                    <i class="la la-language"></i> код
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="kt-portlet__body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="kt_portlet_base_demo_1_1_tab_content" role="tabpanel">
+                             <form method="post" <%if(banner){%> action="/admin/page/banner/update/img" <%}else{%>action="/admin/page/banner/create" <%}%>>
+                                    <div class="form-group">
+                                        <label class="col-form-label col-lg-3 col-sm-12">  link</label>
+                                        <input type="text" name="bannerLink" class="form-control"  placeholder="" value="<%=banner?banner.link:''%>">
+                                        <input type="hidden" name="bannerImg" class="form-control" value=" <%=banner?banner.img_src:''%>">
+                                        <button type="button" class="btn btn-danger setFeaturedImage" style="width: 233px;margin-left: 9px;">Изображение </button>
+                                        <div class="featuredImage" style="width: 250px;">
+                                            <div class="col-md-12 col-lg-12 DropzonImageBlock">
+                                                <%if(banner && banner.img_src){%>
+                                                <img src="<%=banner.img_src%>" alt="">
+                                                <div>
+                                                    <button type="button" class=" dropzonRemuveBtn btn  btn-outline-danger"><i class="la la-trash"></i></button>
+                                                </div>
+                                                <%}%>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <% if (banner){%>
+                                    <input type="hidden" value="<%=banner.id%>" name="id" >
+                                    <button class="btn btn-success btn-custom"  type="submit">Обновить </button>
+                                 <button class="btn btn-danger emptyImgBanner">delete banner</button>
+                                    <%}else {%>
+                                        <button class="btn btn-success btn-custom" type="submit">Создать </button>
+                                    <%}%>
+
+                                </form>
+
+                        </div>
+
+                        <div class="tab-pane" id="kt_portlet_base_demo_1_2_tab_content" role="tabpanel">
+                            <form method="post" <%if(banner){%> action="/admin/page/banner/update/html" <%}else{%>action="/admin/page/banner/create" <%}%>>
+                            <div class="kt-portlet__body">
+                                    <div class="form-group">
+                                        <textarea class="" rows="10" cols="100" name="bannerHtml"><%=banner?banner.html:''%></textarea>
+                                    </div>
+                                </div>
+                                <% if (banner){%>
+                                <input type="hidden" value="<%=banner.id%>" name="id" >
+                                <button class="btn btn-success btn-custom" type="submit" >Обновить </button>
+                                <%}else {%>
+                                    <button class="btn btn-success btn-custom" type="submit">Создать </button>
+                                <%}%>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+
+
+
+
+</script>
+
+<%-include('../include/footer.ejs')%>

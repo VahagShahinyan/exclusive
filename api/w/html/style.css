@@ -1,0 +1,78 @@
+.weather{
+  width:100%;
+  background: #545456;
+  color:#fff;
+  font-family: 'Quicksand';
+}
+.weather .temp-btn
+{
+  background-color: rgba(255,255,0);
+  font-size: 12px;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  border-radius: 2px;
+  height: 24px;
+  width: 40px;
+  color: #666;
+  margin-top:12px;
+  outline: 0;
+  
+}
+.weather h1
+{
+  font-size:45px;
+  padding-right: 10px;
+}
+.weather h2
+{
+  font-size:30px;
+}
+.weather .iconInfo
+{
+  text-align:center;
+  padding-top:15px;
+  
+}
+
+.weather .info
+{
+  text-align:center;
+  font-size:15px;
+  padding-top:15px;
+}
+
+.weather .weather-body
+{
+  text-transform:none; 
+}
+
+.weather .city  {
+  text-align:center;
+}
+
+.weather h5{
+ font-size: 14px;   
+}
+.weather h2 small,.weather h5 small {
+ color: #fff;
+}
+.weather p ,.weather .row{
+  font-size:14px;
+  text-align:center;
+}
+.weather .footerholder {
+    font-size:12px;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    color:#000;
+    background:#fff;
+    text-align:center;
+}
+
+.weather h6 {
+  padding-top:10px;
+  font-size:14px !important;
+  text-align:center;
+  font-weight: 300 !important;
+}
